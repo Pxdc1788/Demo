@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myclass12a1nbk</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="grid"></div>
+
+    <div class="warning"></div>
+
+    <div class="base">
+        <button id="activate">
+            <span></span>
+        </button>
+    </div>
+
+    <div class="box opened" id="cover">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <span></span><span></span>
+    </div>
+
+    <div class="hinges"></div>
+
+    <div class="text">
+        NHẤN-&thinsp; NÚT ĐỎ
+    </div>
+
+    <div id="panel2">
+        <div id="msg">XIN LỖI HÃY ẤN CÓ</div>
+        <span id="again">AGAIN PLEASE</span>
+    </div>
+
+
+    <div id="panel">
+
+        <div id="msg">TRẢ LỜI </div>
+        <div id="time">10</div>
+        <span id="abort"><a href="index2.html">CÓ</a></span>
+        <span id="no">KHÔNG</span>
+        <span id="detonate">Oc Cho</span>
+    </div>
+
+    <div id="turn-off"></div>
+    <div id="closing"></div>
+
+    <div id="restart"><button id="reload"></button></div>
+
+    <div id="mute"></div>
+
+    <audio id="alarm">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <script src="main.js"></script>
+
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function() {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function(msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>
